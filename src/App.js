@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { ArrayUseState } from './components/ImmutableState/ArrayUseState';
+import { ObjectUseState } from './components/ImmutableState/ObjectUseState';
+import { ParentFour } from './components/IncorrectOptimization/ParentFour';
+import { ParentThree } from './components/IncorrectOptimization/ParentThree';
+import { GrandParent } from './components/Optimizations/GrandParent';
+import { ParentTwo } from './components/Optimizations/ParentTwo';
+import { Parent } from './components/ParentChild/Parent';
+import { UseMemo } from './components/UseMemo';
+import { UseReducer } from './components/UseReducer/UseReducer';
+import { UseState } from './components/UseState/UseState';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <UseState />
+      <UseReducer />
+      <ObjectUseState />
+      <ArrayUseState />
+      <Parent />
+      <GrandParent />
+      <ParentTwo />
+      <ParentThree />
+      <ParentFour />
+      <UseMemo />
+    </>
   );
 }
 
